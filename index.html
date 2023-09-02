@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Personal Ebook Library</title>
+  <style>
+    /* Add CSS styles for the header */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    header .home-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 8px 16px;
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    header nav ul li:last-child {
+      margin-right: 0;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Add CSS styles for the cover image library */
+    .cover-library {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .cover-image {
+      max-width: 200px;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      transition: transform 0.2s ease;
+    }
+
+    .cover-image:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <a class="home-button" href="index.html">Home</a>
+    <h1>Personal Ebook Library</h1>
+    <nav>
+      <ul>
+        <li><a href="english.html">English</a></li>
+        <li><a href="bangla.html">Bangla</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <section class="section">
+      <h2>English</h2>
+      <div class="cover">
+        <a href="english.html">
+          <img src="coverE.png" alt="English Cover" class="cover-image">
+        </a>
+      </div>
+    </section>
+    <section class="section">
+      <h2>Bangla</h2>
+      <div class="cover">
+        <a href="bangla.html">
+          <img src="coverB.png" alt="Bangla Cover" class="cover-image">
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- JavaScript for mobile responsiveness -->
+  <script>
+    function adjustLayoutForMobile() {
+      // Get the screen width
+      const screenWidth = window.innerWidth;
+
+      // Define a breakpoint for mobile (e.g., 768 pixels)
+      const mobileBreakpoint = 768;
+
+      // Check if the screen width is below the mobile breakpoint
+      if (screenWidth < mobileBreakpoint) {
+        // Adjust header styles for mobile
+        document.querySelector('header h1').style.fontSize = '1.2rem';
+        document.querySelector('header .home-button').style.fontSize = '1rem';
+
+        // Adjust cover image sizes for mobile
+        const coverImages = document.querySelectorAll('.cover-image');
+        coverImages.forEach(image => {
+          image.style.maxWidth = '100%';
+          image.style.height = 'auto';
+        });
+      }
+    }
+
+    // Call the function initially and whenever the window is resized
+    adjustLayoutForMobile();
+    window.addEventListener('resize', adjustLayoutForMobile);
+  </script>
+</body>
+</html>

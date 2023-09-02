@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Personal Ebook Library</title>
+  <style>
+    /* Add CSS styles for the header */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem; /* Increase font size for the title */
+    }
+
+    header .home-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 8px 16px;
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    header nav ul li:last-child {
+      margin-right: 0;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Add CSS styles for the cover image library */
+    .cover-library {
+      display: grid; /* Use a grid layout for the book covers */
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid layout */
+      gap: 20px;
+      padding: 20px;
+      justify-items: center;
+    }
+
+    .cover-image {
+      width: 150px; /* Fixed width for the cover images */
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      transition: transform 0.2s ease;
+    }
+
+    .cover-image:hover {
+      transform: scale(1.05);
+    }
+
+    /* Style for book titles */
+    .book-title {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    
+    <h1>Personal Ebook Library</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="english.html">English</a></li>
+        <li><a href="bangla.html">Bangla</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content Section -->
+  <main class="cover-library">
+    <!-- Row 1 -->
+    <!-- Add the "Parasite Genesis" book -->
+    <section class="section">
+      <h3>Parasite Genesis</h3>
+      <div class="cover">
+        <a href="english.html">
+          <img src="Parasite Genesis.png" alt="Parasite Genesis" class="cover-image">
+        </a>
+      </div>
+    </section>
+
+    <!-- Add the "Untitled 71" book -->
+    <section class="section">
+      <h3>Untitled 71</h3>
+      <div class="cover">
+        <a href="untitled-71.html">
+          <img src="untitled 71.png" alt="Untitled 71" class="cover-image">
+        </a>
+      </div>
+    </section>
+
+    <!-- Add the "Sketch" book -->
+    <section class="section">
+      <h3>Sketch</h3>
+      <div class="cover">
+        <a href="sketch.html">
+          <img src="sketch.jfif" alt="Sketch" class="cover-image">
+        </a>
+      </div>
+    </section>
+
+    <!-- Add the "The Precious Detective" book -->
+    <section class="section">
+      <h3>The Precious Detective</h3>
+      <div class="cover">
+        <a href="The-Precious-Detective.html">
+          <img src="Lucien_lesley.png" alt="The Precious Detective" class="cover-image">
+        </a>
+      </div>
+    </section>
+    
+    <!-- Row 2 -->
+    <!-- Add the "একটি মফস্বল এলাকা" book -->
+    <section class="section">
+      <h3>একটি মফস্বল এলাকা</h3>
+      <div class="cover">
+        <a href="town.html">
+          <img src="town.jfif" alt="একটি মফস্বল এলাকা" class="cover-image">
+        </a>
+      </div>
+    </section>
+
+    <!-- Add the "Clinic" book -->
+    <section class="section">
+      <h3>Clinic</h3>
+      <div class="cover">
+        <a href="clinic.html">
+          <img src="clinic.jfif" alt="Clinic" class="cover-image">
+        </a>
+      </div>
+    </section>
+
+    <!-- Add the "আঁধারে আখ্যায়িত উজ্জ্বলতা" book -->
+    <section class="section">
+      <h3>আঁধারে আখ্যায়িত উজ্জ্বলতা</h3>
+      <div class="cover">
+        <a href="another-book.html">
+          <img src="darkness called brighter.png" alt="আঁধারে আখ্যায়িত উজ্জ্বলতা" class="cover-image">
+        </a>
+      </div>
+    </section>
+
+    <!-- Add more books as needed -->
+  </main>
+</body>
+</html>
